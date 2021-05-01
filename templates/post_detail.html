@@ -1,5 +1,5 @@
 {% extends 'base.html'%}
-{% load crispy_forms_tags %}
+
 
 {% block content%}
 <div class="post-entry">
@@ -10,9 +10,10 @@
 <a href="{% url 'post_delete' post.pk %}">+ Delete Blog Post</a>
 
 <body>
+    {% load crispy_forms_tags %}
     <form method="POST">
         {% csrf_token %}
-        {{comment_form.as_p}}
+        {{ commentForm.as_p }}
         <input type="submit" value="Post">
     </form>
 </body>
