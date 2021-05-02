@@ -25,7 +25,7 @@ def post_detailview(request, id):
             context = {
                 'comment_form': cf,
             }
-            return render(request, 'templates/ post_detail.html', context)
+            return render(request, ' post_detail.html', context)
 
 
 class BlogListView(ListView):

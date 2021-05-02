@@ -11,9 +11,9 @@
 
 <body>
     {% load crispy_forms_tags %}
-    <form method="POST">
+    <form action="" method="POST">
         {% csrf_token %}
-        {{ commentForm.as_p }}
+        {{ comment_f.as_p }}
         <input type="submit" value="Post">
     </form>
 </body>
