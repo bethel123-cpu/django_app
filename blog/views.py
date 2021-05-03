@@ -7,6 +7,13 @@ from django.urls import reverse_lazy
 from .models import Post, Comment
 from .forms import CommentForm
 # Create your views here.
+import requests
+
+
+def index(request):
+    r = requests.get('http://httpbin.org/status/418')
+    print(r.text)
+    return HttpResponse('<pre>' + r.text + '</pre>')
 
 
 def post_detailview(request, id):
