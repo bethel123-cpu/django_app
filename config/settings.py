@@ -28,7 +28,8 @@ SECRET_KEY = os.getenv.__get__("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv.__get__("DEBUG")
 
-ALLOWED_HOSTS = ['.herokuapp.com', 'localhost', '127.0.0.1', ]
+ALLOWED_HOSTS = ['.herokuapp.com', 'localhost', '127.0.0.1',
+                 'https://frozen-reef-66929.herokuapp.com/', ]
 
 
 # Application definition
@@ -129,8 +130,11 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [str(BASE_DIR.joinpath('static'))]
+#STATIC_ROOT = os.joinpath(BASE_DIR, 'staticfiles')
 STATIC_ROOT = STATIC_ROOT = str(BASE_DIR.joinpath('staticfiles'))  # new
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'  # new
+
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
