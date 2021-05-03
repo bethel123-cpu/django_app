@@ -29,7 +29,7 @@ SECRET_KEY = os.getenv.__get__("SECRET_KEY")
 DEBUG = os.getenv.__get__("DEBUG")
 
 ALLOWED_HOSTS = ['.herokuapp.com', 'localhost', '127.0.0.1',
-                 'https://frozen-reef-66929.herokuapp.com/', ]
+                 'https://frozen-reef-66929.herokuapp.com/', 'https://rocky-caverns-75036.herokuapp.com/', ]
 
 
 # Application definition
@@ -130,7 +130,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [str(BASE_DIR.joinpath('static'))]
-#STATIC_ROOT = os.joinpath(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_ROOT = STATIC_ROOT = str(BASE_DIR.joinpath('staticfiles'))  # new
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'  # new
 
